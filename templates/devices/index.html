@@ -8,6 +8,7 @@
 	<meta name="generator" content="TextMate http://macromates.com/">
 	<meta name="author" content="Karsten Kroesch">
 	<style>
+	body { font-size: 2em; }
 	.name { color: #000; font-weight: bold; }
 	.description { color: #ddd; font: italic 0.9em sans-serif; }
 	
@@ -23,7 +24,7 @@
 <body width="100%">
 
 	{% if device_list %}
-	    <table width="50%">
+	    <table width="75%">
 	    {% for device in device_list %}
 	        <tr>
 						<td><span class="name">{{ device.name }}</span><br /><span class="description">{{ device.description }}</span></td>
