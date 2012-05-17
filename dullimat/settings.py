@@ -7,6 +7,9 @@ ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
 
+MASTER_DEVICE = 'io.kroesch.ch'
+DEVICE_PORT = 50290
+
 MANAGERS = ADMINS
 
 DATABASES = {
@@ -67,6 +70,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
+	'/Users/kkroesch/Documents/workspace/dullimat/dullimat/static',
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -120,7 +124,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
-    'devices'
+    'devices',
 	# Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )

@@ -7,28 +7,23 @@
 	<title>index</title>
 	<meta name="generator" content="TextMate http://macromates.com/">
 	<meta name="author" content="Karsten Kroesch">
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
 	<style>
 	body { font-size: 2em; }
 	.name { color: #000; font-weight: bold; }
 	.description { color: #ddd; font: italic 0.9em sans-serif; }
-	
-	a.menu { display:block; margin-bottom:5px; text-align:center; width:16ex;
-	         border-style:ridge; border-width:3px; padding:2px; text-decoration:none; }
-
-	a.menu:link    { color:#00f; background-color:transparent; }
-	a.menu:visited { color:#00f; background-color:transparent; }
-	a.menu:hover   { color:#ff0; background-color:#00f; }
-	a.menu:active  { color:#ff0; background-color:#a03; }
 	</style>
 </head>
 <body width="100%">
-
+	
+	<h2>Geräte</h2>
+	
 	{% if device_list %}
 	    <table width="75%">
 	    {% for device in device_list %}
 	        <tr>
 						<td><span class="name">{{ device.name }}</span><br /><span class="description">{{ device.description }}</span></td>
-						<td class="switch"><a class="menu" href="/devices/{{ device.id }}/">{% if device.status == '1' %}AN{% else %}AUS{% endif %}</a></td>
+						<td class="switch"><a class="button" href="/devices/{{ device.id }}/">{% if device.status == '1' %}AN{% else %}AUS{% endif %}</a></td>
 					</tr>
 	    {% endfor %}
 			</table>

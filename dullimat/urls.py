@@ -3,6 +3,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('devices.views',
+	url(r'^$', 'main'),
     url(r'^devices/$', 'index', name='index'),
 	url(r'^devices/(?P<device_id>\d+)/$', 'switch'),
 	# url(r'^$', 'dullimat.views.home', name='home'),

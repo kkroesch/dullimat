@@ -20,24 +20,18 @@ def get_status() :
 	return answer
 
 	
-	
-set_port(1, 1)
-sleep(1)
-set_port(2, 1)
-sleep(1)
-set_port(1, 0)
-sleep(1)
-set_port(2, 0)
-sleep(2)
-
-set_port(1, 1)
-set_port(2, 1)
-print get_status()
-sleep(2)
-
-set_port(1, 0)
-set_port(2, 0)
-
-print get_status()
+while (1):	
+	set_port(1, 1)
+	sleep(4)
+	set_port(1, 0)
+	set_port(2, 1)
+	sleep(1)
+	set_port(2, 0)
+	set_port(3, 1)
+	sleep(4)
+	set_port(2, 1)
+	sleep(1)
+	set_port(3, 0)
+	set_port(2, 0)
 
 sock.close()
